@@ -1,0 +1,166 @@
+:root {
+    --dark-green: #004933;
+    --transparent-green: rgba(46, 125, 50, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Elimina el scroll */
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--transparent-green);
+    margin-top: 30px;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.buttons-container {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--dark-green);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.help-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+}
+
+.whatsapp-icon {
+    width: 30px;
+    height: auto;
+}
+
+.help-text {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Tablet (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .main-logo {
+        width: 120px;
+    }
+    
+    .header h1 {
+        font-size: 36px;
+    }
+    
+    .btn {
+        font-size: 18px;
+        padding: 18px;
+    }
+    
+    .help-text {
+        font-size: 18px;
+    }
+
+    .help-section {
+        bottom: 30px;
+    }
+    
+    .whatsapp-icon {
+        width: 35px;
+    }
+}
+
+/* Escritorio (>1024px) */
+@media (min-width: 1025px) {
+    .main-container {
+        max-width: 500px;
+    }
+    
+    .main-logo {
+        width: 140px;
+    }
+    
+    .header h1 {
+        font-size: 40px;
+    }
+    
+    .btn {
+        font-size: 20px;
+        padding: 20px;
+        max-width: 350px;
+    }
+    
+    .help-text {
+        font-size: 20px;
+    }
+
+    .whatsapp-icon {
+        width: 40px;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ver Rutas</title>
+    <link rel="stylesheet" href="VerRutaEstilos.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <img src="assets/flecha_atras.png" alt="Atrás" class="back-arrow" id="backArrow">
+            VER RUTA
+        </header>
+        
+        <main class="route-container">
+            <div class="routes-grid">
+                <!-- Ruta 1 -->
+                <div class="route-card">
+                    <div class="image-container">
+                        <img src="assets/escala1.jpg" alt="Vertical" class="route-image">
+                        <div class="text-overlay">
+                            <h3>VERTICAL</h3>
+                            <div class="route-location">PIRQA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ruta 2 -->
+                <div class="route-card">
+                    <div class="image-container">
+                        <img src="assets/escala2.jpg" alt="Jesus Maria" class="route-image">
+                        <div class="text-overlay">
+                            <h3>Jesus Maria</h3>
+                            <div class="route-location">Miraflores</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ruta 3 -->
+                <div class="route-card full-width">
+                    <div class="image-container">
+                        <img src="assets/escala3.jpg" alt="Base Camp" class="route-image">
+                        <div class="text-overlay">
+                            <h3>BASE CAMP</h3>
+                            <div class="route-location">Surgullio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botón Iniciar -->
+            <button class="start-button">Iniciar</button>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-separator"></div>
+            <div class="footer-icons">
+                <img src="assets/icono1.png" alt="Inicio">
+                <img src="assets/icono2.png" alt="Rutas">
+                <img src="assets/icono3.png" alt="Perfil">
+                <img src="assets/icono4.png" alt="Chat">
+                <img src="assets/icono5.png" alt="Config">
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Flecha atrás - Versión robusta
+            const backArrow = document.getElementById('backArrow');
+            if (backArrow) {
+                backArrow.onclick = function() {
+                    // Verificar si hay historial
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        window.location.href = 'MenuInicio.html'; // Fallback seguro
+                    }
+                };
+            }
+
+            // Footer icons (manteniendo tu código original)
+            const footerIcons = document.querySelectorAll('.footer-icons img');
+            const urls = [
+                'MenuInicio.html',
+                'Rutas.html', 
+                'Perfil.html',
+                'Chat.html',
+                'Configuracion.html'
+            ];
+            
+            footerIcons.forEach((icon, i) => {
+                icon.onclick = () => window.location.href = urls[i];
+            });
+        });
+    </script>
+</body>
+</html>
