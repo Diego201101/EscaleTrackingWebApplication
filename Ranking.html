@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="RankingEstilos.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <img src="assets/flecha_atras.png" alt="Atrás" class="back-arrow">
+            RANKING
+        </header>
+        <main class="ranking-container">
+            <div class="ranking-table">
+                <div class="table-header">
+                    <div class="header-cell">Puesto</div>
+                    <div class="header-cell">Nombre</div>
+                    <div class="header-cell">Tiempo</div>
+                </div>
+                
+                <div class="table-row first-place">
+                    <div class="table-cell">1er puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+                
+                <div class="table-row second-place">
+                    <div class="table-cell">2do puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+                
+                <div class="table-row third-place">
+                    <div class="table-cell">3er puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell">4to puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="table-cell">5to puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="table-cell">6to puesto</div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="app-footer">
+            <div class="footer-separator"></div>
+            <div class="footer-icons">
+                <img src="assets/icono1.png" alt="Inicio">
+                <img src="assets/icono2.png" alt="Rutas">
+                <img src="assets/icono3.png" alt="Perfil">
+                <img src="assets/icono4.png" alt="Chat">
+                <img src="assets/icono5.png" alt="Config">
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Flecha atrás
+            const backArrow = document.querySelector('.back-arrow');
+            if (backArrow) {
+                backArrow.style.cursor = 'pointer';
+                backArrow.addEventListener('click', function() {
+                    window.history.back();
+                });
+            }
+
+            // Footer icons
+            const footerIcons = document.querySelectorAll('.footer-icons img');
+            const urls = [
+                'MenuInicio.html',     // Inicio
+                'Rutas.html',          // Rutas
+                'Perfil.html',         // Perfil
+                'Chat.html',           // Chat
+                'Configuracion.html'   // Config
+            ];
+            footerIcons.forEach((icon, i) => {
+                icon.style.cursor = 'pointer';
+                icon.addEventListener('click', function() {
+                    window.location.href = urls[i];
+                });
+            });
+        });
+    </script>
+</body>
+</html>

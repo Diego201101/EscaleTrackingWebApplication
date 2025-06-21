@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="PerfilEstilos.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <img src="assets/flecha_atras.png" alt="Atrás" class="back-arrow">
+            <span id="user-greeting">Hola, Usuario</span>
+        </header>
+        <main class="profile-container">
+            <div class="distance-box">
+                <h3>Distancia</h3>
+                <p>8 km / 10.2 km</p>
+            </div>
+            <div class="interval-training">
+                <img src="assets/map.jpg" alt="Mapa" class="interval-map">
+                <div class="interval-content">
+                    <div class="interval-title">Entrenamiento de<br>Intervalos</div>
+                    <div class="interval-distance">5.1km X2</div>
+                </div>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-large">
+                    <img src="assets/historial.png" alt="Historial" class="feature-icon">
+                    Historial de rutas
+                </div>
+                <div class="feature-smalls">
+                    <div class="feature-small">
+                        <img src="assets/registros.png" alt="Registros" class="feature-icon">
+                        Registros
+                    </div>
+                    <div class="feature-small">
+                        <img src="assets/trainer.png" alt="Trainer" class="feature-icon">
+                        Trainer
+                    </div>
+                </div>
+            </div>
+            <div class="logout-container">
+                <button class="logout-button">Cerrar Sesión</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-separator"></div>
+            <div class="footer-icons">
+                <img src="assets/icono1.png" alt="Inicio">
+                <img src="assets/icono2.png" alt="Rutas">
+                <img src="assets/icono3.png" alt="Perfil">
+                <img src="assets/icono4.png" alt="Chat">
+                <img src="assets/icono5.png" alt="Config">
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar nombre de usuario en el saludo
+            const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual'));
+            if (usuarioActual && usuarioActual.username) {
+                document.getElementById('user-greeting').textContent = 'Hola, ' + usuarioActual.username;
+            }
+
+            // Flecha atrás
+            const backArrow = document.querySelector('.back-arrow');
+            if (backArrow) {
+                backArrow.style.cursor = 'pointer';
+                backArrow.addEventListener('click', function() {
+                    window.history.back();
+                });
+            }
+
+            // Footer icons
+            const footerIcons = document.querySelectorAll('.footer-icons img');
+            const urls = [
+                'MenuInicio.html',     // Inicio
+                'Rutas.html',          // Rutas
+                'Perfil.html',         // Perfil
+                'Chat.html',           // Chat
+                'Configuracion.html'   // Config
+            ];
+            footerIcons.forEach((icon, i) => {
+                icon.style.cursor = 'pointer';
+                icon.addEventListener('click', function() {
+                    window.location.href = urls[i];
+                });
+            });
+            const logoutButton = document.querySelector('.logout-button');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

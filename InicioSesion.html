@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="InicioSesionEstilos.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Iniciar Sesión</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" placeholder="Ingrese su usuario">
+                <span class="error-message" id="username-error"></span>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña">
+                <span class="error-message" id="password-error"></span>
+            </div>
+            
+            <button type="submit" class="submit-btn">Ingresar</button>
+            
+            <div class="register-link">
+                ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
+            </div>
+        </form>
+    </div>
+    <script src="InicioSesionCode.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rutas</title>
+    <link rel="stylesheet" href="RutasEstilos.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <img src="assets/flecha_atras.png" alt="Atrás" class="back-arrow">
+            Rutas
+        </header>
+        
+        <main class="menu-container">
+            <div class="menu-bubble" id="ver-rutas">
+                <img src="assets/ver_rutas.png" alt="Ver Rutas" class="menu-icon">
+                <span class="menu-text">Ver Rutas</span>
+            </div>
+            
+            <div class="menu-bubble" id="crear-rutas">
+                <img src="assets/crear_rutas.png" alt="Crear Rutas" class="menu-icon">
+                <span class="menu-text">Crear Rutas</span>
+            </div>
+            
+            <div class="menu-bubble" id="repetir-rutas">
+                <img src="assets/repetir_rutas.png" alt="Repetir Rutas" class="menu-icon">
+                <span class="menu-text">Repetir rutas</span>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-separator"></div>
+            <div class="footer-icons">
+                <img src="assets/icono1.png" alt="Inicio">
+                <img src="assets/icono2.png" alt="Rutas">
+                <img src="assets/icono3.png" alt="Perfil">
+                <img src="assets/icono4.png" alt="Chat">
+                <img src="assets/icono5.png" alt="Config">
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Flecha atrás
+            const backArrow = document.querySelector('.back-arrow');
+            if (backArrow) {
+                backArrow.style.cursor = 'pointer';
+                backArrow.addEventListener('click', function() {
+                    window.history.back();
+                });
+            }
+
+            // Footer icons
+            const footerIcons = document.querySelectorAll('.footer-icons img');
+            const urls = [
+                'MenuInicio.html',     // Inicio
+                'Rutas.html',          // Rutas
+                'Perfil.html',         // Perfil
+                'Chat.html',           // Chat
+                'Configuracion.html'   // Config
+            ];
+            footerIcons.forEach((icon, i) => {
+                icon.style.cursor = 'pointer';
+                icon.addEventListener('click', function() {
+                    window.location.href = urls[i];
+                });
+            });
+
+            // Menú de rutas
+            document.getElementById('ver-rutas').addEventListener('click', function() {
+                window.location.href = 'VerRuta.html';
+            });
+            
+            document.getElementById('crear-rutas').addEventListener('click', function() {
+                window.location.href = 'CrearRuta.html';
+            });
+            
+            document.getElementById('repetir-rutas').addEventListener('click', function() {
+                // Aquí puedes agregar la redirección para Repetir Rutas si es necesario
+                // window.location.href = 'RepetirRuta.html';
+            });
+        });
+    </script>
+</body>
+</html>
