@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscaleTracking - Tu app de rutas y escalada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #004933 0%, #1B5E20 100%);
+            min-height: 100vh;
+            color: #fff;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .landing-container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 2.5rem 1.2rem 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .landing-logo {
+            width: 120px;
+            margin-bottom: 1.5rem;
+        }
+        .landing-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .landing-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 2.2rem;
+            text-align: center;
+            color: #e0ffe0;
+        }
+        .landing-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+        .landing-btn {
+            background: #fff;
+            color: #004933;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .landing-btn:hover {
+            background: #e0ffe0;
+            color: #1B5E20;
+        }
+        .features-section {
+            background: rgba(255,255,255,0.07);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        .features-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-align: center;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #e0ffe0;
+        }
+        .features-list li {
+            margin-bottom: 0.7rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .features-list img {
+            width: 22px;
+            height: 22px;
+            filter: invert(1) brightness(2);
+        }
+        .landing-help {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        .landing-help img {
+            width: 28px;
+            height: 28px;
+        }
+        .landing-help span {
+            color: #e0ffe0;
+            font-size: 1rem;
+        }
+        @media (min-width: 600px) {
+            .landing-container {
+                max-width: 600px;
+            }
+            .landing-title {
+                font-size: 2.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <img src="assets/imagen1.png" alt="EscaleTracking Logo" class="landing-logo">
+        <div class="landing-title">EscaleTracking</div>
+        <div class="landing-subtitle">
+            Tu app para registrar rutas, escalar, competir y conectar con la comunidad.
+        </div>
+        <div class="landing-buttons">
+            <a href="InicioSesion.html" class="landing-btn">Iniciar sesión</a>
+            <a href="registro.html" class="landing-btn">Registrarse</a>
+        </div>
+        <div class="features-section">
+            <div class="features-title">¿Qué puedes hacer?</div>
+            <ul class="features-list">
+                <li><img src="assets/ver_rutas.png" alt="">Ver y registrar rutas de escalada</li>
+                <li><img src="assets/ranking.png" alt="">Consultar tu ranking y el de tus amigos</li>
+                <li><img src="assets/chat.png" alt="">Chatear con otros atletas</li>
+                <li><img src="assets/perfil.png" alt="">Gestionar tu perfil y progreso</li>
+                <li><img src="assets/atletas.png" alt="">Ver la comunidad de atletas</li>
+                <li><img src="assets/config.png" alt="">Configurar tu experiencia</li>
+            </ul>
+        </div>
+        <div class="landing-help">
+            <img src="assets/imagen2.png" alt="WhatsApp">
+            <span>¿Necesitas ayuda? Contáctanos</span>
+        </div>
+    </div>
+</body>
+</html>
