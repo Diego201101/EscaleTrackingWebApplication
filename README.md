@@ -1,5 +1,6 @@
 El grupo DiaLearn presenta el prototivo de nuestra aplicacion web EscaleTracking capaz de brindar ayuda y mejorar la experiencia de usuarios que pratiquen el deporte de escalar
 Aplicacion Web de EscaleTracking: https://diego201101.github.io/EscaleTrackingWebApplication/
+Landing Page de EscaleTracking: https://diego201101.github.io/EscaleTrackingLandingPage/
 
 
 User Stories en Formato Gherkin
