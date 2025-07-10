@@ -1,3 +1,6 @@
+Pagina Web de EscaleTracking: https://diego201101.github.io/EscaleTrackingWebApplication/
+
+
 User Stories en Formato Gherkin
 
 Este directorio contiene los archivos .feature que representan las 39 User Stories del proyecto, escritos en formato Gherkin para facilitar la automatización de pruebas y la documentación de requisitos.
