@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const usuario = usuariosRegistrados.find(u => u.username === username && u.password === password);
             
             if (usuario) {
-                alert('Inicio de sesión exitoso!');
                 localStorage.setItem('usuarioActual', JSON.stringify(usuario));
                 window.location.href = 'MenuInicio.html';
             } else {
